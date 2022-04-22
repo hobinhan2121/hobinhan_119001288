@@ -1,0 +1,64 @@
+@page
+@model hobinhan.Pages_Category.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Category[0].Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Category) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+        <th>
+                
+
+    Viet Nam News Economy 
+
+Domestic businesses seek ways to adapt to Russia-Ukraine conflict
+Update: April, 22/2022 - 09:15
+Share facebook
+Chia sẻ bài viết lên Twitter
+Share google+
+|
+https://link.gov.vn/XxRg89PN
+
+ 
+Participants at the event. — VNA/VNS Photo
+
+HCM CITY — While the Russia-Ukraine conflict has had negative impacts related to transport, inflation and international payments for import and export activities, it could also create opportunities for businesses that adopt adaptation measures, experts have said.
+
+Speaking at a workshop, entitled "Adaptive solutions for import and export activities in the context of the Russia-Ukraine crisis" organised by the Việt Nam International Arbitration Centre (VIAC) in collaboration with the HCM City International Integration Support Centre (CIIS) on Wednesday, VIAC Chairman Vũ Tiến Lộc said the Russia-Ukraine conflict is considered one of the hot spots having direct impacts on the economies of many countries.
+
+As Việt Nam's important trading partners in the Eurasian region, import and export activities between Việt Nam and Russia as well as Ukraine have also experienced significant changes. Businesses have not only faced disruption in the supply of raw materials and fuels but also impacts on the delivery of goods and increased transportation costs, he said.
+
+Phạm Bình An, Deputy Director of the HCM City Institute for Development Studies, said Việt Nam's two-way trade with Russia and Ukraine reached about US$7.6 billion last year, accounting for 1.2 per cent of the country's total import and export turnover.
+
+The Russia-Ukraine conflict has thus both directly and indirectly affected Việt Nam's economy, he said.
+
+Vietnamese enterprises have not only faced difficulties in the direct imports of some products from Russia and interruption in exporting products to Russia and Ukraine, but they also have to face competition in purchasing raw materials from other markets, An said.
+            </th>
+}
+    </tbody>
+</table>
